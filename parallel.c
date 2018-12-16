@@ -18,7 +18,7 @@ int main(int argc, char const *argv[])
     {
       execvp(current[0], current);
 
-      printf("ERROR\n");
+      printf("fail\n");
     }
     else
     {
