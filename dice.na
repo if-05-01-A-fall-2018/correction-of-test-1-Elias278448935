@@ -1,0 +1,41 @@
+inc 12
+
+la 0 32
+la 0 36
+in 0
+
+la 0 36  #zweite zahl hinzufügen
+la 0 40
+in 0
+
+lv 0 32 # überprüfen ob gleich
+lv 0 36
+rel 2   #rel hinzugefügt
+tjmp .method
+jmp .method2 #zu jmp geändert stadt fjmp
+
+.method
+la 0 40  #la 0 40 hinzugefügt
+lv 0 32
+lv 0 36
+add
+lit 2
+mul
+sto
+lv 0 40 #ausgabe verändert
+lit 1
+out 0
+out 3
+halt
+
+.method2
+la 0 40 #la 0 40 hinzugefügt
+lv 0 32
+lv 0 36
+add
+sto
+lv 0 40 #ausgabe verändert
+lit 1
+out 0
+out 3
+halt 
