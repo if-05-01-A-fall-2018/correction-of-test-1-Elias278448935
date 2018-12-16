@@ -13,8 +13,8 @@ int main(int argc, char const *argv[])
   while(count != 4)
   {
     char* current[] = {arguments[count], arguments[4]};
-    pid_t pid_ls = fork();
-    if (pid_ls == 0)
+    int pid = fork();
+    if (pid == 0)
     {
       execvp(current[0], current);
 
@@ -26,7 +26,7 @@ int main(int argc, char const *argv[])
     }
     count++;
   }
-}
+
   printf("Done\n");
 
   return 0;
